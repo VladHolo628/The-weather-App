@@ -15,22 +15,25 @@ function renderLocations() {
   console.log(storage.addedLocations);
   UI_ELEMENTS.locationsList.innerHTML = "";
   // let data = JSON.parse(localStorage.getItem("favourite_cities"));
-  storage.addedLocations.forEach((location) => {
-    UI_ELEMENTS.locationsList.insertAdjacentHTML(
-      "beforeend",
-      `<li class="locations__item">
-            <a href="#" class="locations__item-link">
-              ${location.name}
-            </a>
-          </li>`
-    );
-  });
-  UI_ELEMENTS.locationsList.childNodes.forEach((item) => {
-    item.addEventListener("click", () => {
-      getWeather(item.textContent);
-      localStorage.setItem("currentCity", item.textContent);
+  if(storage.addedLocations !== null) {
+    storage.addedLocations.forEach((location) => {
+      UI_ELEMENTS.locationsList.insertAdjacentHTML(
+        "beforeend",
+        `<li class="locations__item">
+              <a href="#" class="locations__item-link">
+                ${location.name}
+              </a>
+            </li>`
+      );
     });
-  });
+    UI_ELEMENTS.locationsList.childNodes.forEach((item) => {
+      item.addEventListener("click", () => {
+        getWeather(item.textContent);
+        localStorage.setItem("currentCity", item.textContent);
+      });
+    });
+  }
+
 }
 
 UI_ELEMENTS.addIcon.addEventListener("click", () => {

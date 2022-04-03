@@ -2,7 +2,7 @@ export let storage = {
   addedLocations: [],
   currentCity: "",
 };
-storage.addedLocations = JSON.parse(localStorage.getItem("favourite_cities"));
+
 if (localStorage.getItem("currentCity")) {
   storage.currentCity = localStorage.getItem("currentCity");
 } else {
@@ -23,6 +23,9 @@ export function removeLocation(location) {
 }
 
 export function updateStorage() {
+  if(localStorage.getItem("favourite_cities") !== null && storage.addedLocations.length === 0) {
+    storage.addedLocations = JSON.parse(localStorage.getItem("favourite_cities"));
+  }
   localStorage.setItem(
     "favourite_cities",
     JSON.stringify(storage.addedLocations)
