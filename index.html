@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>The Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <form class="app__search-form">
+          <input class="app__search-input" type="text" placeholder="Aktobe" />
+          <button class="app__search-btn" type="submit"></button>
+        </form>
+        <div class="app__content">
+          <div class="current-location">
+            <div
+              class="current-location__screen current-location__screen-1 current-location__screen--active now-tab"
+            >
+              <p class="current-location__temperature current-temperature">
+                14&#176;
+              </p>
+              <img
+                class="current-location__img"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="Cloud"
+              />
+              <div class="current-location__city">
+                <p class="current-location__city-name city-name">Aktobe</p>
+                <div
+                  class="current-location__city-icon current-location__city-icon--active"
+                >
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.54"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.5 1C15.0556 1 12.8556 2.7875 12 5.125C11.1444 2.7875 8.94444 1 6.5 1C3.44444 1 1 3.6125 1 7.1875C1 12 5.27778 16.125 12 23C18.7222 16.125 23 12 23 7.1875C23 3.6125 20.5556 1 17.5 1Z"
+                      stroke="black"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="current-location__screen current-location__screen-2 details-tab"
+            >
+              <h4 class="details__title city-name">Aktobe</h4>
+              <dl class="details__list">
+                <div class="details__list-row">
+                  <dt class="details__name details__name-temperature">
+                    Temperature:
+                  </dt>
+                  <dd
+                    class="details__data details__data-temperature current-temperature"
+                  >
+                    14&#176;
+                  </dd>
+                </div>
+                <div class="details__list-row">
+                  <dt class="details__name details__name-feelslike">
+                    Feels like:
+                  </dt>
+                  <dd
+                    class="details__data details__data-feelslike current-feelslike"
+                  >
+                    10&#176;
+                  </dd>
+                </div>
+                <div class="details__list-row">
+                  <dt class="details__name details__name-weather">Weather:</dt>
+                  <dd
+                    class="details__data details__data-weather current-weather"
+                  >
+                    Clouds
+                  </dd>
+                </div>
+                <div class="details__list-row">
+                  <dt class="details__name details__name-sunrise">Sunrise:</dt>
+                  <dd class="details__data details__data-sunrise">03:21</dd>
+                </div>
+                <div class="details__list-row">
+                  <dt class="details__name details__name-sunset">Sunset:</dt>
+                  <dd class="details__data details__data-sunset">18:54</dd>
+                </div>
+              </dl>
+            </div>
+            <div
+              class="current-location__screen current-location__screen-3 forecast-tab"
+            >
+              <h4 class="details__title forecast__title city-name">Aktobe</h4>
+              <div class="forecast">
+                <div class="forecast__item">
+                  <div class="forecast__item-row">
+                    <p class="forecast__item-date">17 May</p>
+                    <p class="forecast__item-time">12:00</p>
+                  </div>
+                  <div class="forecast__item-row">
+                    <div class="forecast__item-data">
+                      <p class="forecast__item-temperature">
+                        Temperature: 13&#176;
+                      </p>
+                      <p class="forecast__item-feelslike">
+                        Feels like: 10&#176;
+                      </p>
+                    </div>
+                    <div class="forecast__item-icon">
+                      <img
+                        class="forecast__item-icon-img"
+                        src="./img/rain-icon.svg"
+                        alt=""
+                      />
+                      <p class="forecast__item-icon-descr">Rain</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="forecast__item">
+                  <div class="forecast__item-row">
+                    <p class="forecast__item-date">17 May</p>
+                    <p class="forecast__item-time">12:00</p>
+                  </div>
+                  <div class="forecast__item-row">
+                    <div class="forecast__item-data">
+                      <p class="forecast__item-temperature">
+                        Temperature: 13&#176;
+                      </p>
+                      <p class="forecast__item-feelslike">
+                        Feels like: 10&#176;
+                      </p>
+                    </div>
+                    <div class="forecast__item-icon">
+                      <img
+                        class="forecast__item-icon-img"
+                        src="./img/rain-icon.svg"
+                        alt=""
+                      />
+                      <p class="forecast__item-icon-descr">Rain</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="forecast__item">
+                  <div class="forecast__item-row">
+                    <p class="forecast__item-date">17 May</p>
+                    <p class="forecast__item-time">12:00</p>
+                  </div>
+                  <div class="forecast__item-row">
+                    <div class="forecast__item-data">
+                      <p class="forecast__item-temperature">
+                        Temperature: 13&#176;
+                      </p>
+                      <p class="forecast__item-feelslike">
+                        Feels like: 10&#176;
+                      </p>
+                    </div>
+                    <div class="forecast__item-icon">
+                      <img
+                        class="forecast__item-icon-img"
+                        src="./img/rain-icon.svg"
+                        alt=""
+                      />
+                      <p class="forecast__item-icon-descr">Rain</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item">
+                  <button class="tabs__button tabs__button--active">Now</button>
+                </li>
+                <li class="tabs__item">
+                  <button class="tabs__button">Details</button>
+                </li>
+                <li class="tabs__item">
+                  <button class="tabs__button">Forecast</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="locations">
+            <h4 class="locations__title">Added Locations:</h4>
+            <ul class="locations__list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

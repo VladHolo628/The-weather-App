@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+  background-color: #e5e5e5;
+  padding: 50px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 621px;
+  height: 477px;
+  background-color: #fe7;
+  padding: 12px;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+.app__search-form {
+  position: relative;
+}
+
+.app__search-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #000000;
+  padding: 11px 16px;
+  font-size: 21px;
+}
+
+.app__search-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url(../img/search.svg);
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.app__content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 405px;
+}
+.current-location {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.current-location__screen {
+  border: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  flex-grow: 1;
+}
+
+.current-location__screen-1 {
+  padding-top: 28px;
+  padding-left: 23px;
+  padding-right: 28px;
+
+  display: none;
+}
+.current-location__temperature {
+  font-size: 70px;
+  line-height: 82px;
+}
+.current-location__img {
+  display: inline-block;
+  margin-left: 90px;
+  margin-top: 40px;
+  margin-bottom: 30%;
+  width: 78px;
+}
+.current-location__city {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 17px;
+}
+.current-location__city-icon {
+  cursor: pointer;
+}
+.current-location__city-icon--active svg {
+  fill: #e45826;
+}
+
+.current-location__screen-2 {
+  padding: 0 17px;
+  display: none;
+}
+.current-location__screen-3 {
+  padding: 0 16px;
+  height: 89%;
+  display: none;
+}
+.current-location__screen--active {
+  display: block;
+}
+.locations {
+  width: 50%;
+  padding-top: 37px;
+  border: 1px solid #000000;
+  border-top: none;
+  max-height: 100%;
+  overflow: hidden;
+}
+.locations__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #000;
+  padding-left: 18px;
+}
+.locations__list {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  overflow-y: scroll;
+  height: 90%;
+  user-select: none;
+}
+.locations__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+.locations__item-link {
+  color: #000;
+  text-decoration: none;
+}
+.locations__item-link:hover {
+  color: #f0a500;
+}
+.locations__item-link:active {
+  color: #e45826;
+}
+
+.tabs__list {
+  display: flex;
+  align-items: flex-start;
+}
+.tabs__item {
+  flex-grow: 1;
+}
+.tabs__button {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  width: 100%;
+  height: 44px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 0 1px #000;
+  outline-offset: -1px;
+  cursor: pointer;
+}
+.tabs__button:hover {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+.tabs__button--active {
+  background-color: #000;
+  color: #fff;
+}
+
+.details__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 33px;
+  margin-bottom: 42px;
+}
+.details__list {
+  margin-bottom: 56px;
+}
+.details__list-row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.details__name {
+  margin-right: 5px;
+}
+.forecast {
+  max-height: 284px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.forecast::-webkit-scrollbar {
+  display: none;
+}
+.forecast__title {
+  margin-bottom: 7px;
+}
+.forecast__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 265px;
+  height: 120px;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid #000;
+}
+
+.forecast__item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast__item-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
